@@ -1,6 +1,12 @@
 # sunflower
-extended mqtt broker
 
+## future
+
+ - support queue.
+ - persistence.
+ - load balance.
+ - end to end QoS
+ 
 # mqtt specification (v3.1.1)
 
 [mqtt.org](http://docs.oasis-open.org/mqtt/mqtt/v3.1.1/mqtt-v3.1.1.html)
@@ -58,7 +64,3 @@ extended mqtt broker
  - Position: starts at byte 2
  - 残りのデータの長さとは、パケットの残りのbytes数である。(variable headerとpayloadの合計)
  - 「残りのデータの長さ」の長さ自体は含まない。
-
-# extended
-
- - support queue. FIFO and Persistence.
