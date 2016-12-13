@@ -1,10 +1,23 @@
 package com.github.itsubaki.sunflower;
 
-import java.util.Arrays;
-
 public class Bootstrap {
 
 	public static void main(String[] arg) {
-		System.out.println(Arrays.toString(arg));
+		Bootstrap bootstrap = new Bootstrap();
+		bootstrap.start(arg);
 	}
+
+	public void start(String[] arg) {
+		Sunflower sunflower = new Sunflower();
+		ShutdownHook hook = new ShutdownHook(sunflower);
+		Runtime.getRuntime().addShutdownHook(new Thread(hook));
+
+		try {
+			sunflower.start();
+		} catch (Exception e) {
+			sunflower.shutdown();
+			e.printStackTrace();
+		}
+	}
+
 }
