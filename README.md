@@ -2,10 +2,7 @@
 
 ## future
 
- - support queue.
- - persistence.
- - load balance.
- - end to end QoS
+ - support queue. persistence, load balance
  
 # mqtt specification (v3.1.1)
 
@@ -32,7 +29,6 @@
   + U+0001FからU+001F
   + U+007FからU+009F
  - シーケンス「0xEF 0xBB 0xBF」は「U+FEFF」と解釈する。skipしてはいけない。
- - Non normative example: 省略
 
 # MQTT制御パケットフォーマット
 
