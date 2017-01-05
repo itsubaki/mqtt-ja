@@ -10,5 +10,6 @@ public class Sunflower {
 	}
 
 	public void shutdown() {
+		broker.shutdown();
 	}
 }

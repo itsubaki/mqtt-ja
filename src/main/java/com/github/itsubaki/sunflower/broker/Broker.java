@@ -22,4 +22,8 @@ public class Broker {
 	public boolean isClosed() {
 		return closed.get();
 	}
+
+	public void shutdown() {
+		closed.set(true);
+	}
 }
