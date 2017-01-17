@@ -2,17 +2,15 @@ package com.github.itsubaki.sunflower.sub;
 
 import java.util.concurrent.ArrayBlockingQueue;
 
-import com.github.itsubaki.sunflower.message.Message;
-
 public class Subscriber {
-	private ArrayBlockingQueue<Message> queue;
+	private ArrayBlockingQueue<String> queue;
 	private boolean fair = true;
 
 	public Subscriber(int capacity) {
 		queue = new ArrayBlockingQueue<>(capacity, fair);
 	}
 
-	public void push(Message message) {
+	public void push(String message) {
 		queue.offer(message);
 	}
 
