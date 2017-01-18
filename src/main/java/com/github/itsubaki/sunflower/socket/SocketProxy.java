@@ -18,6 +18,11 @@ public class SocketProxy {
 	private Acceptor acceptor;
 	private ServerSocket socket;
 
+	public SocketProxy(int port) {
+		this.port = port;
+		this.target = null;
+	}
+
 	public SocketProxy(int port, URI target) {
 		this.port = port;
 		this.target = target;

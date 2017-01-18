@@ -16,6 +16,10 @@ public class Util {
 	}
 
 	public static URI urlFormSocket(URI uri, ServerSocket socket) throws Exception {
+		if (uri == null) {
+			return null;
+		}
+
 		URI proxy = new URI(uri.getScheme(), uri.getUserInfo(), uri.getHost(), socket.getLocalPort(), uri.getPath(),
 				uri.getQuery(), uri.getFragment());
 		return proxy;

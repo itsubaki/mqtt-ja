@@ -18,7 +18,10 @@ public class Connection {
 
 	public Connection(Socket socket, URI target) throws Exception {
 		this.src = socket;
-		this.dest = new Socket(target.getHost(), target.getPort());
+		this.dest = socket;
+		if (target != null) {
+			this.dest = new Socket(target.getHost(), target.getPort());
+		}
 
 		req = new Transfer(src, dest, this);
 		res = new Transfer(dest, src, this);
