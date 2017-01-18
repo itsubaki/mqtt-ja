@@ -87,6 +87,33 @@
 
 ## PUBLISH
 
+### Fixed
+
+#### DUP
+
+ - Position: byte 1, bit 3
+ - DUP
+  + 0: このPUBLISHパケットは、serverまたはclientが最初に送信したものである。
+  + 1: このPUBLISHパケットは、再送信されたものである。
+ - serverまたはclientがPUBLISHパケットを再送信する場合はかならず1にしなければいけない。
+ - QoS0のメッセージの場合は、必ず0にしなければならない。
+ - serverは、受信したPUBLISHパケットのDUPフラグの値を、subscriberに送信する時に伝搬しない。
+ - 送信するPUBLISHパケットのDUPフラグの値は、受信したPUBLISHパケットのDUPフラグの値とは独立して設定される。
+ - DUPフラグの値は、PUBLISHパケットが再送信されたものかどうかによってのみ決定されなければならない。
+
+#### QoS
+
+ - Position: byte 1, bit 2-1
+ - メッセージ配信の保証レベルを表す。
+
+#### RETAIN
+
+
+
+### Variable
+
+### Payload
+
 ## PUBACK
 
 ## PUBREC
