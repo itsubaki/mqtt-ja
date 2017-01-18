@@ -1,6 +1,6 @@
 # sunflower
 
-## future
+## feature
 
  - support queue. persistence, load balance
 
