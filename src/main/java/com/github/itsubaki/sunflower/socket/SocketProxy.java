@@ -39,7 +39,7 @@ public class SocketProxy {
 		acceptor = new Acceptor(socket, target);
 		new Thread(null, acceptor, "SocketProxy: " + socket.getLocalPort()).start();
 
-		LOG.info("opend. SocketProxy:" + socket.getLocalPort());
+		LOG.info("opend. SocketProxy: " + socket.getLocalPort());
 	}
 
 	public void close() {

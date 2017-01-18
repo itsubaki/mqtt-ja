@@ -18,10 +18,10 @@ import com.github.itsubaki.sunflower.util.Util;
 public class Acceptor implements Runnable {
 	private static final transient Logger LOG = LoggerFactory.getLogger(Acceptor.class);
 
-	private ServerSocket socket;
-	private URI target;
 	private AtomicReference<CountDownLatch> pause = new AtomicReference<>();
 	private List<Connection> connections = new LinkedList<>();
+	private ServerSocket socket;
+	private URI target;
 
 	public Acceptor(ServerSocket socket, URI target) {
 		this.socket = socket;
