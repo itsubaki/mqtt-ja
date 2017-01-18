@@ -50,13 +50,9 @@
 ### フラグ
 
  - Position: byte 1, bits 3-0
-
-
  - MQTTパケットタイプにより異なる。
  - Reservedの値もきちんと定義する。
  - 正しくないフラグを受け取った場合、serverとclientはコネクションを切断する。
-
-
  - DUP: PUBLISHパケットの重複配送フラグ
  - QoS: PUBLISH Quality of Service
  - RETAIN: PUBLISH Retainフラグ
@@ -64,8 +60,6 @@
 ### 残りのデータの長さ
 
  - Position: starts at byte 2
-
-
  - 残りのデータの長さとは、パケットの残りのbytes数である。(variable headerとpayloadの合計)
  - 「残りのデータの長さ」の長さ自体は含まない。
  - 残りの長さは、可変長符号化方式を使用して符号化される。
