@@ -30,9 +30,9 @@
   + U+007FからU+009F
  - シーケンス「0xEF 0xBB 0xBF」は「U+FEFF」と解釈する。skipしてはいけない。
 
-# MQTTパケットフォーマット
+# パケットフォーマット
 
-## 1MQTTパケットの構造
+## MQTTパケットの構造
 
  - Fixed header: すべてのパケットで使用する。
  - Variable header: いくつかのパケットで使用する。
@@ -40,19 +40,22 @@
 
 ## Fixed header
 
- - 1byte: MQTTパケットタイプ(4bit) + フラグ(4bit)
+ - 1byte: パケットタイプ(4bit) + フラグ(4bit)
  - 2byte: 残りのデータの長さ
 
-### MQTTパケットタイプ
+### パケットタイプ
 
  - Position: byte 1, bits 7-4
 
 ### フラグ
 
  - Position: byte 1, bits 3-0
+
+
  - MQTTパケットタイプにより異なる。
  - Reservedの値もきちんと定義する。
  - 正しくないフラグを受け取った場合、serverとclientはコネクションを切断する。
+
 
  - DUP: PUBLISHパケットの重複配送フラグ
  - QoS: PUBLISH Quality of Service
@@ -61,6 +64,8 @@
 ### 残りのデータの長さ
 
  - Position: starts at byte 2
+
+
  - 残りのデータの長さとは、パケットの残りのbytes数である。(variable headerとpayloadの合計)
  - 「残りのデータの長さ」の長さ自体は含まない。
  - 残りの長さは、可変長符号化方式を使用して符号化される。
@@ -72,4 +77,34 @@
 
 ### Packet Identifier
 
-###
+## Payload
+
+# MQTTパケット
+
+## CONNECT
+
+## CONNACK
+
+## PUBLISH
+
+## PUBACK
+
+## PUBREC
+
+## PUBREL
+
+## PUBCOMP
+
+## SUBSCRIBE
+
+## SUBACK
+
+## UNSUBSCRIBE
+
+## UNSUBACK
+
+## PINGREQ
+
+## PINGRESP
+
+## DISCONNECT
