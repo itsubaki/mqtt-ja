@@ -14,6 +14,8 @@ dependencies {
  compile group: 'org.slf4j', name: 'slf4j-api', version: '1.7.21'
  compile group: 'ch.qos.logback', name: 'logback-classic', version: '1.1.7'
  compile group: 'ch.qos.logback', name: 'logback-core', version: '1.1.7'
+ compile group: 'org.fusesource.hawtdispatch', name: 'hawtdispatch', version: '1.22'
+ compile group: 'org.fusesource.hawtdispatch', name: 'hawtdispatch-transport', version: '1.22'
  testCompile 'junit:junit:4.11'
  testCompile 'org.hamcrest:hamcrest-library:1.3'
 }
