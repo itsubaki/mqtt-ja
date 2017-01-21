@@ -1,10 +1,10 @@
-package com.github.itsubaki.sunflower.transport;
+package com.github.itsubaki.sunflower.dispatch;
 
 import java.net.URI;
 
 import org.junit.Test;
 
-import com.github.itsubaki.sunflower.transport.Server;
+import com.github.itsubaki.sunflower.dispatch.Server;
 import com.github.itsubaki.sunflower.util.UtilTest;
 
 public class ServerTest {

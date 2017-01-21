@@ -1,4 +1,4 @@
-package com.github.itsubaki.sunflower.transport;
+package com.github.itsubaki.sunflower.dispatch;
 
 import java.nio.ByteBuffer;
 import java.nio.charset.Charset;

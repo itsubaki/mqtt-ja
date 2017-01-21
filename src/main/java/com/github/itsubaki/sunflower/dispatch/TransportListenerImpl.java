@@ -1,4 +1,4 @@
-package com.github.itsubaki.sunflower.transport;
+package com.github.itsubaki.sunflower.dispatch;
 
 import java.io.IOException;
 

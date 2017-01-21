@@ -1,4 +1,4 @@
-package com.github.itsubaki.sunflower.transport;
+package com.github.itsubaki.sunflower.dispatch;
 
 import org.fusesource.hawtdispatch.Task;
 import org.slf4j.Logger;

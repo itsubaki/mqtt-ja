@@ -1,5 +1,5 @@
 
-package com.github.itsubaki.sunflower.transport;
+package com.github.itsubaki.sunflower.dispatch;
 
 import java.net.URI;
 import java.util.concurrent.Executors;
