@@ -2,6 +2,7 @@ package com.github.itsubaki.sunflower.socket;
 
 import org.junit.Test;
 
+import com.github.itsubaki.sunflower.socket.SocketProxy;
 import com.github.itsubaki.sunflower.util.UtilTest;
 
 public class SocketProxyTest {

@@ -2,7 +2,7 @@
 
 ## feature
 
- - support queue. persistence, load balance
+ - support queue, persistence, load balance
 
 # mqtt specification (v3.1.1)
 
