@@ -19,7 +19,7 @@ public class Transfer extends Thread {
 	private Connection con;
 
 	public Transfer(Socket src, Socket dest, Connection con) {
-		super("Transfer: " + src.getPort() + "-" + dest.getPort());
+		super.setName("Transfer[" + hashCode() + "]: " + src.getPort() + "-" + dest.getPort());
 
 		this.src = src;
 		this.dest = dest;
