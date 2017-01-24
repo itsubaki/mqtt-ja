@@ -1,9 +1,3 @@
-# sunflower
-
-## feature
-
- - support queue, persistence, load balance
-
 # mqtt specification (v3.1.1)
 
 [mqtt.org](http://docs.oasis-open.org/mqtt/mqtt/v3.1.1/mqtt-v3.1.1.html)
