@@ -96,8 +96,6 @@
 
 #### RETAIN
 
-
-
 ### Variable
 
 ### Payload
@@ -123,3 +121,30 @@
 ## PINGRESP
 
 ## DISCONNECT
+
+# Operational behavior
+
+## Storing state
+
+## QoS levels and protocol flows
+
+## Message delivery retry
+
+## Message receipt
+
+## Message ordering
+
+ - クライアントはプロトコルフローを実装する際、次のルールに従わなければならない。
+  + QoS1または2の場合、PUBLISHパケットを再送信する際は、元のPUBLISHパケットの順序で再送しなければならない。
+  + QoS1の場合、PUBLISHパケットを受け取った順番で、PUBACKパケットを送信しなければならない。
+  + QoS2の場合、PUBLISHパケットを受け取った順番で、PUBRECパケットを送信しなければならない。
+  + QoS2の場合、PUBRECパケットを受け取った順番で、PUBRELパケットを送信しなければならない。
+ - サーバは、デフォルトでは、Topic単位で順序が保証されていなければならない。
+ - 順序が保証されない機能を提供しても良い。
+ - サーバが、順序付きTopicにパブリッシュされたメッセージを処理する際、各サブスクライバに対して上記のルールに従って配送する必要がある。
+ - 加えて、PUBLISHパケットは(TopicおよびQoSが同じ)サブスクライバに対して、受信した順番で送信しなければならない。
+
+
+## Topic Names and Topic Filters
+
+## Handling erros
